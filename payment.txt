@@ -1,0 +1,66 @@
+<?php
+include('functions.php');
+include_once 'db_connect.php';
+include 'filesLogic.php';
+
+
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+	header("location: loginn.php");
+}
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+  <head>
+    
+    <link rel="stylesheet" href="style.css">
+    <title>online courses</title>
+    <style>
+         body{
+                background-image: url("img/lrrr.jpg");
+                background-repeat: no-repeat;
+                background-size:cover;
+           
+            }
+            .container{
+                padding: 10px;
+                background-color: blueviolet;
+                height:40%;
+                width:30%;
+                position: absolute;
+                left:1000px;
+                border-radius: 10px;
+                top:350px;
+
+            }
+            .img-size{
+                width: 60%;
+                height:60%;
+            }
+            .legit{
+                position: relative;
+                left:100px;
+            }
+    
+
+    </style>
+  </head>
+  <body>
+
+        <div class="container">
+            
+        </div>
+    <div class="legit">
+          
+        <img src="img/oc2.JPG" class="img-size">
+    </div>
+    
+</body>
+</html>
